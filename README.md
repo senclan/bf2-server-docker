@@ -28,16 +28,16 @@ The bf2 server docs specify all the ports below should be forwarded
 
 ```
 TCP     80
-TCP     4711
+TCP     4711        # RCON
 UDP/TCP 1024-1124
 UDP     1500-4999
-UDP     17567
+UDP     16567       # Server Port
 UDP/TCP 18000
 UDP/TCP 18300
 UDP/TCP 27900
 UDP     27901
-UDP/TCP 29900
-UDP     55123-55125
+UDP/TCP 29900       # GameSpy
+UDP     55123-55125 # VOIP
 ```
 
 However starting up a fresh server, netstat reports the following ports
@@ -60,3 +60,13 @@ For the most basic setup, you only need to expose 2 ports `16567` and `29900`.
 ```
 docker run -p 16567:16567/udp -p 29900:29900/udp --rm -it bf2/server
 ```
+
+You can add additional arguments for the bf2 binary at the end of the docker
+command.
+
+```
+docker run -p 16567:16567/udp -p 29900:29900/udp --rm -v /path/to/maplist.con:/maplist.con -v /path/to/serversettings.con:/serversettings.con -it bf2/server +config /serversettings.con +mapList /maplist.con
+```
+
+Here I've added the maplist.con and serversettings.con files, and told added
+the corresponding args at the end of the command.
