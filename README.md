@@ -54,8 +54,8 @@ udp        0      0 0.0.0.0:29900           0.0.0.0:*                           
 
 For the most basic setup, you only need to expose 2 ports `16567` and `29900`.
 
-**16567** Is needed for game play. (Required)
-**29900** Is needed to see the game in the server browser. (Optional)
+* `16567` Is needed for game play. (Required)
+* `29900` Is needed to see the game in the server browser. (Optional)
 
 ```
 docker run -p 16567:16567/udp -p 29900:29900/udp --rm -it bf2/server
