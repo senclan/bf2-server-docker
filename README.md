@@ -68,5 +68,5 @@ command.
 docker run -p 16567:16567/udp -p 29900:29900/udp --rm -v /path/to/maplist.con:/maplist.con -v /path/to/serversettings.con:/serversettings.con -it bf2/server +config /serversettings.con +mapList /maplist.con
 ```
 
-Here I've added the maplist.con and serversettings.con files, and told added
-the corresponding args at the end of the command.
+Here I've added the `maplist.con` and `serversettings.con` files and added the
+corresponding args at the end of the command.
