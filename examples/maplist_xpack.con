@@ -1,0 +1,9 @@
+;; Special Forces maps
+MapList.append devils_perch gpm_cq
+MapList.append ghost_town gpm_cq
+MapList.append iron_gator gpm_cq
+MapList.append leviathan gpm_cq
+MapList.append mass_destruction gpm_cq
+MapList.append night_flight gpm_cq
+MapList.append surge gpm_cq
+MapList.append warlord gpm_cq

@@ -44,8 +44,15 @@ EXPOSE 29900/udp
 EXPOSE 29900/tcp
 EXPOSE 55123-55125/udp
 
-RUN ln -s /bf2/start.sh /bin/bf2server
+COPY docker-entrypoint.sh /
+
+RUN ln -s /bf2/start.sh /bin/bf2server \
+    && chmod +x /docker-entrypoint.sh \
+    && chown -R 1000:1000 /bf2
+
+USER 1000:1000
 
 WORKDIR /bf2
 
-ENTRYPOINT ["/bin/bf2server"]
+ENTRYPOINT ["/docker-entrypoint.sh"]
+CMD ["bf2server"]

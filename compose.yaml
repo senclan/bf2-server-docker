@@ -1,0 +1,35 @@
+version: '3'
+
+services:
+  bf2:
+    build:
+      tags:
+        - bf2/server:latest
+      context: .
+    tty: true
+    environment:
+      - BF2_CONFIG=/serversettings.con
+      - BF2_MAPLIST=/maplist.con
+    ports:
+      - 16567:16567/udp
+      - 29900:29900/udp
+    volumes:
+      - ./examples/maplist_bf2.con:/maplist.con:ro
+      - ./examples/serversettings.con:/serversettings.con:ro
+  xpack:
+    build:
+      tags:
+        - bf2/server:latest
+      context: .
+    tty: true
+    environment:
+      - BF2_MODPATH=mods/xpack
+      - BF2_CONFIG=/serversettings.con
+      - BF2_MAPLIST=/maplist.con
+      - BF2_PORT=16568
+    ports:
+      - 16568:16568/udp
+      - 29901:29900/udp
+    volumes:
+      - ./examples/maplist_xpack.con:/maplist.con:ro
+      - ./examples/serversettings.con:/serversettings.con:ro
