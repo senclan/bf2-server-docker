@@ -1,0 +1,27 @@
+;; BF2 maps
+MapList.append dalian_plant gpm_cq
+MapList.append daqing_oilfields gpm_cq
+MapList.append dragon_valley gpm_cq
+MapList.append fushe_pass gpm_cq
+MapList.append greatwall gpm_cq
+MapList.append gulf_of_oman gpm_cq
+MapList.append highway_tampa gpm_cq
+MapList.append kubra_dam gpm_cq
+MapList.append mashtuur_city gpm_cq
+MapList.append midnight_sun gpm_cq
+MapList.append operation_blue_pearl gpm_cq
+MapList.append operation_clean_sweep gpm_cq
+MapList.append road_to_jalalabad gpm_cq
+MapList.append sharqi_peninsula gpm_cq
+MapList.append songhua_stalemate gpm_cq
+MapList.append strike_at_karkand gpm_cq
+MapList.append wake_island_2007 gpm_cq
+MapList.append zatar_wetlands gpm_cq
+
+;; Euro Force maps
+; MapList.append operationsmokescreen gpm_cq
+; MapList.append taraba_quarry gpm_cq
+
+;; Armed Fury maps
+; MapList.append operationharvest gpm_cq
+; MapList.append operationroadrage gpm_cq
